@@ -1,0 +1,47 @@
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\bin\Debug\Indigo.exe.config
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\bin\Debug\Indigo.exe
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\bin\Debug\Indigo.pdb
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\bin\Debug\HotkeyLib.dll
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\bin\Debug\NAudio.dll
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\bin\Debug\NAudio.WindowsMediaFormat.dll
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\bin\Debug\HotkeyLib.pdb
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\bin\Debug\NAudio.xml
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Styles\Buttons.baml
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Styles\Colors.baml
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Styles\Fonts.baml
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Styles\ScrollBars.baml
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Styles\Texts.baml
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\App.baml
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\MainWindow.g.cs
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\App.g.cs
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Indigo_MarkupCompile.cache
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Indigo_MarkupCompile.lref
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\MainWindow.baml
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Indigo.g.resources
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Indigo.Properties.Resources.resources
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Indigo.csproj.GenerateResource.Cache
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Indigo.exe
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Indigo.pdb
+C:\Users\DracoLich\documents\visual studio 2013\Projects\Indigo\Indigo\obj\Debug\Indigo.csprojResolveAssemblyReference.cache
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\bin\Debug\Indigo.exe.config
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Indigo.exe
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Indigo.pdb
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\bin\Debug\Indigo.exe
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\bin\Debug\Indigo.pdb
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Indigo.csprojResolveAssemblyReference.cache
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Styles\Buttons.baml
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Styles\Colors.baml
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Styles\Fonts.baml
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Styles\ScrollBars.baml
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Styles\Texts.baml
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\App.baml
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\MainWindow.g.cs
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\App.g.cs
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Indigo_MarkupCompile.cache
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Indigo_MarkupCompile.lref
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\MainWindow.baml
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Indigo.g.resources
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Indigo.Properties.Resources.resources
+E:\Projects\01.07.2018\Projects\Indigo\Indigo\obj\Debug\Indigo.csproj.GenerateResource.Cache

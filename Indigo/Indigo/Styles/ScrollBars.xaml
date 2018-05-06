@@ -1,0 +1,194 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Default Scroll bar-->
+    <Style TargetType="{x:Type ScrollBar}">
+        <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="false"/>
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Padding" Value="20"></Setter>
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Width" Value="15"/>
+        <Setter Property="MinWidth" Value="{Binding Width, RelativeSource={RelativeSource Self}}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollBar}">
+                    <Grid x:Name="Bg" SnapsToDevicePixels="true">
+                        <Grid.RowDefinitions>
+                            <RowDefinition MaxHeight="{DynamicResource {x:Static SystemParameters.VerticalScrollBarButtonHeightKey}}"/>
+                            <RowDefinition Height="0.00001*"/>
+                            <RowDefinition MaxHeight="{DynamicResource {x:Static SystemParameters.VerticalScrollBarButtonHeightKey}}"/>
+                        </Grid.RowDefinitions>
+                        <Border
+                            BorderThickness="0"
+                            Grid.Row="1"
+                            Background="{StaticResource DarkBackgroundBrush}"
+                            BorderBrush="{TemplateBinding BorderBrush}" />
+                        <Button x:Name="PART_LineUpButton"
+                            Command="{x:Static ScrollBar.LineUpCommand}"
+                            IsEnabled="{TemplateBinding IsMouseOver}"
+                            Content="&#xf077;"
+                            Style="{StaticResource MControlButton}"
+                            FontSize="15"
+                            >
+                        </Button>
+                        <Track x:Name="PART_Track"
+                            IsDirectionReversed="true"
+                            IsEnabled="{TemplateBinding IsMouseOver}"
+                            Grid.Row="1">
+                            <Track.Thumb>
+                                <Thumb>
+                                    <Thumb.Resources>
+                                        <Style TargetType="Thumb">
+                                            <Setter Property="Background" Value="{StaticResource LighterUIElementBrush}"></Setter>
+                                            <Setter Property="BorderThickness" Value="0"></Setter>
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate>
+                                                        <Border CornerRadius="5" Width="10" Background="{TemplateBinding Background}"></Border>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </Thumb.Resources>
+                                </Thumb>
+                            </Track.Thumb>
+                        </Track>
+                        <Button Style="{StaticResource MControlButton}" 
+                                FontSize="15"  x:Name="PART_LineDownButton" 
+                                BorderThickness="0" Background="{StaticResource DarkBackgroundBrush}"
+                            Command="{x:Static ScrollBar.LineDownCommand}"
+                            IsEnabled="{TemplateBinding IsMouseOver}"
+                            Grid.Row="2"
+                            Content="&#xf078;">
+                        </Button>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=PART_LineDownButton, Path=IsMouseOver}" Value="true" />
+                                <Condition Binding="{Binding ElementName=PART_LineDownButton, Path=IsPressed}" Value="true" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Foreground" Value="{StaticResource AccentBrush}"></Setter>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=PART_LineUpButton, Path=IsMouseOver}" Value="true" />
+                                <Condition Binding="{Binding ElementName=PART_LineUpButton, Path=IsPressed}" Value="true" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Foreground" Value="{StaticResource AccentBrush}"></Setter>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=PART_LineDownButton, Path=IsMouseOver}" Value="true" />
+                                <Condition Binding="{Binding ElementName=PART_LineDownButton, Path=IsPressed}" Value="false" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Foreground" Value="{StaticResource LighterUIElementBrush}"></Setter>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=PART_LineUpButton, Path=IsMouseOver}" Value="true" />
+                                <Condition Binding="{Binding ElementName=PART_LineUpButton, Path=IsPressed}" Value="false" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Foreground" Value="{StaticResource LighterUIElementBrush}"></Setter>
+                        </MultiDataTrigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <!--Not competed (STACKOVERFLOW)-->
+            <Trigger Property="Orientation" Value="Horizontal">
+                <Setter Property="Width" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBox}},Path=Width}"/>
+                <Setter Property="MinWidth" Value="0"/>
+                <Setter Property="Height" Value="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarHeightKey}}"/>
+                <Setter Property="MinHeight" Value="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarHeightKey}}"/>
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ScrollBar}">
+                            <Grid x:Name="Bg" SnapsToDevicePixels="true">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition MaxWidth="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarButtonWidthKey}}"/>
+                                    <ColumnDefinition Width="0.00001*"/>
+                                    <ColumnDefinition MaxWidth="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarButtonWidthKey}}"/>
+                                </Grid.ColumnDefinitions>
+                                <Border 
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Grid.Column="1"
+                                    Background="{StaticResource DarkBackgroundBrush}"
+                                    BorderBrush="{TemplateBinding BorderBrush}" />
+                                <Button x:Name="PART_LineLeftButton"
+                            Command="{x:Static ScrollBar.LineLeftCommand}"
+                            IsEnabled="{TemplateBinding IsMouseOver}"
+                            Content="&#xf053;"
+                            Style="{StaticResource MControlButton}"
+                            FontSize="15"
+                            >
+                                </Button>
+                                <Track x:Name="PART_Track"
+                            IsEnabled="{TemplateBinding IsMouseOver}"
+                            Grid.Column="1">
+                                    <Track.Thumb>
+                                        <Thumb>
+                                            <Thumb.Resources>
+                                                <Style TargetType="Thumb">
+                                                    <Setter Property="Background" Value="{StaticResource LighterUIElementBrush}"></Setter>
+                                                    <Setter Property="BorderThickness" Value="0"></Setter>
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate>
+                                                                <Border CornerRadius="5" Height="10" Background="{StaticResource LighterUIElementBrush}"></Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Style>
+                                            </Thumb.Resources>
+                                        </Thumb>
+                                    </Track.Thumb>
+                                </Track>
+                                <Button Style="{StaticResource MControlButton}" FontSize="15"  x:Name="PART_LineRightButton" BorderThickness="0" Background="{StaticResource DarkBackgroundBrush}"
+                            Command="{x:Static ScrollBar.LineRightCommand}"
+                            IsEnabled="{TemplateBinding IsMouseOver}"
+                            Grid.Column="2"
+                            Content="&#xf054;">
+                                </Button>
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding ElementName=PART_LineRightButton, Path=IsMouseOver}" Value="true" />
+                                        <Condition Binding="{Binding ElementName=PART_LineRightButton, Path=IsPressed}" Value="true" />
+                                    </MultiDataTrigger.Conditions>
+                                </MultiDataTrigger>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding ElementName=PART_LineLeftButton, Path=IsMouseOver}" Value="true" />
+                                        <Condition Binding="{Binding ElementName=PART_LineLeftButton, Path=IsPressed}" Value="true" />
+                                    </MultiDataTrigger.Conditions>
+                                </MultiDataTrigger>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding ElementName=PART_LineRightButton, Path=IsMouseOver}" Value="true" />
+                                        <Condition Binding="{Binding ElementName=PART_LineRightButton, Path=IsPressed}" Value="false" />
+                                    </MultiDataTrigger.Conditions>
+                                </MultiDataTrigger>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding ElementName=PART_LineLeftButton, Path=IsMouseOver}" Value="true" />
+                                        <Condition Binding="{Binding ElementName=PART_LineLeftButton, Path=IsPressed}" Value="false" />
+                                    </MultiDataTrigger.Conditions>
+                                </MultiDataTrigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
